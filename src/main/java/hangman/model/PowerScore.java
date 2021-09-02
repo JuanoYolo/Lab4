@@ -9,15 +9,9 @@ public class PowerScore implements GameScore{
      */
     @Override
     public int calculateScore(int correctCount, int incorrectCount) {
-        int resultado = (int)Math.pow(5,correctCount) - (incorrectCount * 8);
-        resultado = (resultado<0)?0:resultado;
-        resultado = (resultado>500)?500:resultado;
-        if(resultado <= 0){
-            resultado = 0;
-        }
-        else if(resultado >= 500){
-            resultado = 500;
-        }
+        int resultado = (int) Math.pow(5, correctCount) - (incorrectCount * 8);
+        resultado = (resultado < 0) ? 0 : resultado;
+        resultado = (resultado > 500) ? 500 : resultado;
         return resultado;
     }
 }
